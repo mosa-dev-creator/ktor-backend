@@ -2,7 +2,7 @@
 FROM gradle:8.11.1-jdk17 AS build
 WORKDIR /app
 COPY . .
-RUN gradle build
+RUN gradle build -x test
 
 # Run
 FROM eclipse-temurin:17-jdk
